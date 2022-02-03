@@ -70,4 +70,165 @@
 //     return nums.push(String(num).split('').reverse().join(''));
 // }
 
+//  88.4 Даны два числа. Необходимо проверить, равна ли сумма цифр первого числа сумме цифр второго числа. Некий программист уже написал решение задачи, вот оно:
+
+// let num1 = 234;
+// let num2 = 531;
+
+// let digits1 = String(num1).split('');
+// let digitsSum1 = 0;
+// for (let digit1 of digits1) {
+// 	digitsSum1 += Number(digit1);
+// }
+
+// let digits2 = String(num1).split('');
+// let digitsSum2 = 0;
+// for (let digit2 of digits2) {
+// 	digitsSum2 += Number(digit2);
+// }
+
+// if (digitsSum1 == digitsSum2) {
+// 	alert('суммы цифр совпадают');
+// } else {
+// 	alert('суммы цифр не совпадают');
+// }
+// В чем недостатки приведенного кода? Переделайте код так, чтобы он был более удачным.
+// function sumSeveralDigits (num) {
+//     let digits = String(num).split('');
+//     let digitsSum = 0;
+//     for (let digit of digits) {
+//         digitsSum += Number(digit);
+//     }
+//     return digitsSum;
+// };
+
+// function compareDigits(a,b) {
+//     return sumSeveralDigits(a) === sumSeveralDigits(b) ? console.log('суммы цифр совпадают') : console.log('суммы цифр не совпадают');
+// };
+
+// console.log(compareDigits(234, 531));
+
+// 88.5 Дан массив с числами. Необходимо перебрать этот массив с числами и вывести в консоль нетривиальные делители этих чисел (то есть исключая число 1 и само число). Некий программист уже написал решение задачи:
+// Программист не тестировал отдельно работу функции getDivisors, а написал весь код сразу
+//  и затем запустил его. При запуске оказалось, что код работает как-то не так. Видимо, в 
+//  функции getDivisors была допущена какая-то ошибка.
+// Найдите и исправьте ошибку. Потестируйте отдельно функцию getDivisors, чтобы убедиться,
+//  что она работает корректно после вашей правки. После того, как вы убедитесь в корректности 
+//  работы функции - проверьте полный код решения задачи.
+
+// let nums = [12, 24, 35, 14];
+
+// for (let num of nums) {
+// 	console.log(num + ': ' + getDivisors(num).join(', '));
+// }
+
+// function getDivisors(num) {
+// 	let result = [];
+	
+// 	for (let i = 2; i < num; i++) {
+// 		if (num % i === 0) {
+// 			result.push(i);
+// 		}
+// 	}
+	
+// 	return result;
+// }
+
+// console.log(getDivisors(12));
+
+// 89
+
+// 89.1  Дана функция getSum, находящая сумму элементов переданного массива:
+// Дана функция getDigits, возвращающая массив цифр числа:
+// Используя комбинацию приведенных функций найдите сумму цифр числа 12345.
+
+// function getSum(arr) {
+// 	let sum = 0;
+	
+// 	for (let elem of arr) {
+// 		sum += Number(elem);
+// 	}
+	
+// 	return sum;
+// };
+
+
+// function getDigits(num) {
+// 	return String(num).split('');
+// };
+
+// let num = 12345;
+// console.log(getSum(getDigits(num)));
+
+
+// 89.2 ано число. Нужно найти его делители (без 1 и самого числа), а затем найти среднее арифметическое 
+// (сумма делить на количество) делителей числа и вывести результат на экран. Некий программист уже написал решение задачи:
+// Нахождение массива делителей числа:
+// Программист не тестировал отдельно работу своих функций, а написал весь код сразу и затем запустил его. 
+// При запуске оказалось, что код работает неверно. Найдите и исправьте ошибки программиста. Потестируйте 
+// отдельно работу всех функций, чтобы убедиться, что они работают корректно после ваших правок. После 
+// того, как вы убедитесь в корректности работы функций - проверьте полный код решения задачи.
+
+
+// console.log( getAvg(getDivisors(24)) );
+
+// // Нахождение среднего арифметического:
+// function getAvg(arr) {
+// 	let sum = 0;
+// 	for (let elem of arr) {
+// 		sum += elem;
+// 	}
+// 	return sum / arr.length;
+// };
+
+// function getDivisors(num) {
+// 	let arr = [];
+// 	for (let i = 2; i < num; i += 1) {
+// 		if (num % i === 0) {
+// 			arr.push(i);
+// 		}
+// 	}
+//     return arr;
+// };
+
+// 90
+
+// 90.1
+
+// function getDigits(num) {
+//     return String(num).split('');
+// };
+
+// console.log(getDigits(24));
+
+// function getSum(arr) {
+//     let sum = 0;
+//     for(let elem of arr) {
+//         sum += Number(elem);
+//     }
+//     return sum;
+// };
+
+// console.log(getSum(getDigits(24)));
+
+// function inRange(num) {
+//     let sum  = getSum(getDigits(num));
+//     return sum >= 1 && sum <= 9;
+// };
+
+// console.log(inRange(5));
+
+// let arr = [1, 2, 15, 89, 220];
+// let result = [];
+// for (let elem of arr) {
+//     if (inRange(elem)) {
+//         result.push(elem);
+//     }
+
+// };
+// console.log(result);
+
+
+
+
 
