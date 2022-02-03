@@ -229,7 +229,7 @@
 // console.log(result);
 
 // 91 
-// 99.1 Реализуйте функцию getOwnDivisors. Потестируйте ее работу.
+// 91.1 Реализуйте функцию getOwnDivisors. Потестируйте ее работу.
 
 // function getOwnDivisors(num) {
 //    let result = [];
@@ -246,7 +246,7 @@
 // console.log(getOwnDivisors(220));
 // console.log(getOwnDivisors(284));
 
-// 99.2 Реализуйте функцию getSum. Потестируйте ее работу.
+// 91.2 Реализуйте функцию getSum. Потестируйте ее работу.
 
 // function getSum(arr) {
 //     let sum  = 0;
@@ -258,7 +258,7 @@
 // console.log(getSum(getOwnDivisors(220)));
 // console.log(getSum(getOwnDivisors(284)));
 
-// 99.3 Проверьте работу функции isFreindly.
+// 91.3 Проверьте работу функции isFreindly.
 
 // function isFrendly(num1, num2) {
 // 	let sum1 = getSum(getOwnDivisors(num1));
@@ -273,7 +273,7 @@
 
 // console.log(isFrendly(220, 284));
 
-// 99.4 Сделайте функцию getFreindly, которая будет находить пары дружественных чисел в заданном промежутке и возвращать их 
+// 91.4 Сделайте функцию getFreindly, которая будет находить пары дружественных чисел в заданном промежутке и возвращать их 
 // в виде двухмерного массива вида следующего вида:[ [220, 284], [1184, 1210], [2620, 2924] ]. С помощью созданной функции найдите 
 // все пары дружественных чисел на промежутке от 1 до 3000.
 
@@ -310,7 +310,7 @@
 //     };
 
 
-// 99.5 Совершенное число - целое число, равное сумме всех своих собственных делителей (то есть всех положительных делителей, 
+// 91.5 Совершенное число - целое число, равное сумме всех своих собственных делителей (то есть всех положительных делителей, 
 // отличных от самого числа). Сделайте функцию getPerfect,
 //  которая будет находить совершенные числа в заданном диапазоне. Проверьте работу функции в промежутке от 1 до 1000.
 
@@ -343,3 +343,59 @@
 //     };
 
 //     console.log(getPerfect(1, 1000));
+
+
+// 92 
+// 92.1
+
+// function getIntersection(arr1, arr2) {
+//     let result = [];
+//     for (let elem of arr1) {
+//         if (inArr(elem, arr2)) {
+//             result.push(elem);
+//         }
+//     }
+//     return result;
+// };
+
+// function inArr(elem, arr) {
+//     return arr.indexOf(elem) !== -1;
+// };
+
+// console.log( getIntersection([1, 2, 3], [2, 3, 4, 5]) );
+
+// 93
+
+// 93.1 Пусть у нас даны два массива: Давайте функцию getDiff, которая будет находить разность двух массивов.
+
+// let arr1 = [1, 2, 3];
+// let arr2 = [2, 3, 4, 5];
+// console.log(getDifference(arr1, arr2))
+
+// function getDifference(arr1, arr2) {
+//     // let result = [];
+
+//     let difference1 = getDiffenceTwoArr(arr1, arr2);
+//     let difference2 = getDiffenceTwoArr(arr2, arr1);
+
+//     return [].concat(difference1, difference2)
+// };
+
+// function getDiffenceTwoArr (arr1, arr2) {
+//     let result = [];
+//     for (let elem of arr1) {
+//         if(!inArray(elem, arr2)) {
+//             result.push(elem);
+//         }
+        
+//     }
+//     return result;
+// };
+
+
+// function inArray(elem, arr) {
+//     return arr.indexOf(elem) !== -1
+// };
+
+
+
