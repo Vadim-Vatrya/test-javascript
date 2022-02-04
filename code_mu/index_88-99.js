@@ -397,5 +397,270 @@
 //     return arr.indexOf(elem) !== -1
 // };
 
+// 94 
+
+// 94.1 Реализуйте функцию getGreatestCommonDivisor, которая параметрами будет принимать 
+// два числа и возвращать НОД этих двух чисел. При решении задачи старайтесь использовать 
+// вспомогательные функции, в том числе полученные нами ранее в теоретической части.
+
+// console.log(getGreatestCommonDivisor(32, 96))
+// function getGreatestCommonDivisor(a, b) {
+//     let divisors = getIntersection(getDivisors (a), getDivisors (b));
+
+//     return getMaxOfArray(divisors);
+// };
+
+// function getDivisors (num) {
+//     let arr = [];
+//     for (let i = 2; i < num; i += 1) {
+//         if (num % i === 0) {
+//             arr.push(i);
+//         }
+//     }
+//     return arr;
+// };
+
+
+// function getIntersection(arr1, arr2) {
+//     let result = [];
+//     for (let elem of arr1) {
+//         if(inArray(elem, arr2)) {
+//             result.push(elem);
+//         }
+//     }
+//     return result;
+// };
+
+// function inArray(elem, arr) {
+//         return arr.indexOf(elem) !== -1;
+//     };
+
+// function getMaxOfArray(numArray) {
+//         return Math.max.apply(null, numArray);
+//   }
+
+// 94.2 Положительные целые числа, не имеющие общих делителей, кроме тривиальной единицы, 
+// называются взаимно простыми. Говоря другими словами, два числа можно назвать взаимно простыми, 
+// если их НОД равен единице. Напишите функцию, которая параметрами будет принимать два числа и 
+// проверять - взаимно простые они или нет.
+
+// console.log(getMutuallySimpleDigits(32, 96))
+
+// function getMutuallySimpleDigits(a, b) {
+//     return getNod(a, b) === 1 ? console.log('взаимно простые числа') : console.log('не взаимно простые числа')
+// };
+
+// function getNod(a, b) {
+//     let divisors = getIntersection(getDivisors (a), getDivisors (b));
+// return getMinOfArray(divisors);
+// }
+
+// console.log(getNod(11, 13))
+// function getDivisors (num) {
+//     let arr = [];
+//     for (let i = 1; i < num; i += 1) {
+//         if (num % i === 0) {
+//             arr.push(i);
+//         }
+//     }
+//     return arr;
+// };
+
+// function getIntersection(arr1, arr2) {
+//     let result = [];
+//     for (let elem of arr1) {
+//         if(inArray(elem, arr2)) {
+//             result.push(elem);
+//         }
+//     }
+//     return result;
+// };
+
+// function inArray(elem, arr) {
+//         return arr.indexOf(elem) !== -1;
+//     };
+
+// function getMinOfArray(numArray) {
+//         return Math.min.apply(null, numArray);
+//   }
+
+
+// 95
+
+// 95.1 
+
+// function getRandomInt(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// };
+
+// let arr = [1, 2, 3, 4, 4, 5];
+
+// let key = getRandomInt(0, arr.length - 1);
+
+// function random(arr) {
+//     return arr[getRandomInt(0, arr.length - 1)]
+// };
+
+// console.log(random(arr));
+
+
+// 95.2 Используя созданную функцию, найдите сумму трех случайных элементов из массива.
+
+// function getSumRandomElem(arr) {
+   
+//     let digit1 = arr[getRandomInt(0, arr.length - 1)];
+//     let digit2 = arr[getRandomInt(0, arr.length - 1)];
+//     let digit3 = arr[getRandomInt(0, arr.length - 1)];
+//     console.log(digit1, digit2, digit3);
+//     return digit1 + digit2 + digit3;
+// };
+
+// console.log(getSumRandomElem(arr));
+
+//  96 
+
+// 96.1 
+
+// function shuffle(arr) {
+//     let result = [];
+
+//     while(arr.length > 0) {
+//         let randomDigit = getRandomInt(0, arr.length - 1)
+//         let elem = arr.splice(randomDigit, 1)[0]
+//         result.push(elem);
+//     }
+//     return result;
+// };
+
+
+// function getRandomInt(min, max) {
+// 	return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+// let arr = [1, 2, 3, 0, 4, 5, 15, 22];
+// console.log(shuffle(arr));
+
+// 96.2 Сделайте функцию range принимающую параметрами 2 целых числа - начало и конец диапазона, 
+// и возвращающую массив, заполненный целыми числами из этого диапазона.
+
+// function range(start, end) {
+//     let arr = [];
+//     for (let i = start; i <= end; i += 1) {
+//         if (isNaN (start) || isNaN (end) || start >= end) return false;
+//         arr.push(i);
+//     }
+//     return arr;
+// };
+
+// console.log(range(2, 10));
+// console.log(range(2, 1));
+
+// 96.3 Сделайте функцию rangeRand, возвращающую массив, заполненный случайными 
+// целыми числами из заданного диапазона. При этом числа не должны повторяться.
+//  Для решения задачи используйте комбинацию функций range и shuffle.
+
+// function rangeRand(min, max) {
+//     return shuffle(range(min, max))
+// }
+
+// function range(min, max) {
+//     let arr = [];
+//     for (let i = min; i <= max; i += 1) {
+//         if (isNaN (min) || isNaN (max) || min >= max) return false;
+//         arr.push(i);
+//     }
+//     return arr;
+// };
+
+// function shuffle(arr) {
+//     let result = [];
+
+//     while(arr.length > 0) {
+//         let randomDigit = getRandomInt(0, arr.length - 1)
+//         let elem = arr.splice(randomDigit, 1)[0]
+//         result.push(elem);
+//     }
+//     return result;
+// };
+
+
+// function getRandomInt(min, max) {
+// 	return Math.floor(Math.random() * (max - min + 1)) + min;
+// };
+
+// let arr = [1, 2, 3, 0, 4, 5, 15, 22];
+
+// console.log(rangeRand(1, 22));
+
+
+
+// 97 
+
+
+// 97.1 
+
+// function random(arr, length) {
+//     return first(shuffle(arr), length);
+// };
+
+// function first(arr, length) {
+//     return arr.slice(0, length);
+// }
+
+// function shuffle(arr) {
+// 	let result = [];
+	
+// 	while (arr.length > 0) {
+// 		let random = getRandomInt(0, arr.length - 1);
+// 		let elem = arr.splice(random, 1)[0];
+// 		result.push(elem);
+// 	}
+	
+// 	return result;
+// }
+
+// function getRandomInt(min, max) {
+// 	return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+// 98 
+// 98.1 
+// console.log(getLuckyTickets());
+
+// function getLuckyTickets() {
+// 	let result = [];
+	
+// 	for (let i = 1001; i <= 999999; i++) {
+// 		if (isLucky(i)) {
+// 			result.push(i);
+// 		}
+// 	}
+	
+// 	return result;
+// }
+
+// function isLucky(num) {
+// 	let str = normalizeNum(num);
+	
+// 	let sum1 = Number(str[0]) + Number(str[1]) + Number(str[2]);
+// 	let sum2 = Number(str[3]) + Number(str[4]) + Number(str[5]);
+	
+// 	return sum1 == sum2;
+// }
+
+// function normalizeNum(num) {
+// 	let str = String(num);
+	
+// 	if (str.length == 5) {
+// 		str = '0' + str;
+// 	}
+// 	if (str.length == 4) {
+// 		str = '00' + str;
+// 	}
+	
+// 	return str;
+// }
+
+
 
 
