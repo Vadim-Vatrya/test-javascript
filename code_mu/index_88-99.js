@@ -661,6 +661,33 @@
 // 	return str;
 // }
 
+// 99 
+
+// 99.1
+function isLucky(num) {
+	let str = String(num);
+	let sum1 = 0;
+    let sum2 = 0;
+for (let i = 0; i < str.length / 2; i += 1) {
+    sum1 += Number(i)
+};
+
+for (let i = str.length; i < str.length; i += 1) {
+    sum2 += Number(i)
+}
+	return sum1 == sum2;
+};
+
+// 99.2 
+function normalizeNum(num, digitsAmount) {
+	let str = String(num);
+	
+	// код, дополняющий количество цифр
+	// нулями до количества из digitsAmount
+	
+	return str;
+}
+
 
 
 
