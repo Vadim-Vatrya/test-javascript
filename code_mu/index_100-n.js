@@ -261,3 +261,82 @@
 // test(3, function(num) {
 //     return num ** 2;
 // });
+
+
+// 110
+
+// 110.1 Сделайте функцию func, которая параметрами будет принимать два числа, а возвращать 
+// сумму квадрата первого числа с кубом второго числа. Сделайте для этого вспомогательную функцию 
+// square, возводящую число в квадрат, и вспомогательную функцию cube, возводящую число в куб.
+
+// function func(num1, num2) {
+//     return square(num1) + cube(num2)
+// };
+
+// function square(num) {
+//     return num ** 2;
+// };
+
+// function cube(num) {
+//     return num ** 3;
+// };
+
+// console.log(func(4, 5));
+
+// 112
+
+// // 112.1
+// function func1() {
+// 	return function() {
+// 		return 1;
+// 	};
+// }
+// function func2() {
+// 	return function() {
+// 		return 2;
+// 	};
+// }
+
+// alert( func1()() + func2()() );
+
+// 112.2 
+// function func() {
+// 	return function() {
+// 		return function() {
+//             return function() {
+//                 return function() {
+//                     return '!';
+//                 };
+//             };
+// 		};
+// 	};
+// }
+
+// alert( func()()()()() );
+
+// 112.3 
+// function func(num1) {
+// 	return function(num2) {
+//         return function (num3) {
+//             return num1 + num2 + num3;
+//         }
+// 	};
+// }
+
+// alert( func(2)(3)(4) );
+
+// 112.4
+// function func(num1) {
+// 	return function(num2) {
+//         return function (num3) {
+//             return function (num4) {
+//                 return function () {
+//                     return [].concat(num1, num2, num3, num4);
+//                 }
+//             }
+            
+//         }
+// 	};
+// };
+
+// alert( func(2)(3)(4)(5)() );
