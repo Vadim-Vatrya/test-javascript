@@ -31,18 +31,21 @@
 
 // 2 Дан многомерный массив произвольного уровня вложенности, например, такой: [1, [2, 7, 8], [3, 4], [5, [6, 7]]]
 // Выведите на экран все элементы-массивы, содержащие внутри себя только примитивы.
-let array = [1, [2, 7, 8], [3, 4], [5, [6, 7]], 9, 10];
-function func(arr) {
-  let result = [];
+let arrs = [1, [2, 7, 8], [3, 4], [5, [6, 7]], 9, 10];
+// function func(arr) {
+//   let result = [];
 
-  for (let elem of arr) {
-    if (typeof elem === "object") {
-      result.push(...func(elem));
-    } else {
-      result.push(elem);
-    }
-  }
-  return result;
-}
+//   for (let elem of arr) {
+//     if (typeof elem === "object") {
+//       result.push(...func(elem));
+//     } else {
+//       result.push(elem);
+//     }
+//   }
+//   return result;
+// }
 
-console.log(func(array));
+// console.log(func(array));
+
+let result = [].concat(...arrs);
+console.log(result);
