@@ -535,19 +535,19 @@
 //  выше массива это будет выглядеть вот так:
 // [1, 2, 7, 8, 3, 4, 5, 6, 7]
 
-function recursionArr(arr) {
-  for (let elem of arr) {
-    if (typeof elem === "object") {
-      recursionArr(elem);
-    } else {
-      console.log(elem);
-    }
-  }
-}
+// function recursionArr(arr) {
+//   for (let elem of arr) {
+//     if (typeof elem === "object") {
+//       recursionArr(elem);
+//     } else {
+//       console.log(elem);
+//     }
+//   }
+// }
 
-recursionArr([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]);
+// recursionArr([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]);
 
-// 120.3 Дан многомерный объект произвольного уровня вложенности, например, такой:
+// 120.1 Дан многомерный объект произвольного уровня вложенности, например, такой:
 // С помощью рекурсии выведите все примитивные элементы этого объекта на экран.
 
 // let obj = {
@@ -556,4 +556,72 @@ recursionArr([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]);
 //   f: { g: 5, j: 6, k: { l: 7, m: { n: 8, o: 9 } } },
 // };
 
-function recursionObj(obj) {}
+// function recursionObj(obj) {
+//   for (let key in obj) {
+//     if (typeof obj[key] === "object") {
+//       recursionObj(obj[key]);
+//     } else {
+//       console.log(obj[key],);
+//     }
+//   }
+// }
+
+// recursionObj(obj);
+
+// 120.3 Дан многомерный объект произвольного уровня вложенности, например, такой:
+// let obj = {
+//   a: 1,
+//   b: { c: 2, d: 3, e: 4 },
+//   f: { g: 5, j: 6, k: { l: 7, m: { n: 8, o: 9 } } },
+// };
+// С помощью рекурсии найдите сумму элементов этого объекта.//
+
+// function sumOfElemOfObj(obj) {
+//   let sum = 0;
+//   for (let key in obj) {
+//     if (typeof obj[key] === "object") {
+//       sum += sumOfElemOfObj(obj[key]);
+//     } else {
+//       sum += obj[key];
+//     }
+//   }
+//   return sum;
+// }
+// console.log(sumOfElemOfObj(obj));
+
+// 120.4 Дан многомерный массив произвольного уровня вложенности, содержащий внутри себя строки,
+// например, такой. С помощью рекурсии слейте элементы этого массива в одну строку:
+
+// let array = ["a", ["b", "c", "d"], ["e", "f", ["g", ["j", "k"]]]];
+
+// function mergeLetters(arr) {
+//   let str = "";
+//   for (let elem of arr) {
+//     if (typeof elem === "object") {
+//       str += mergeLetters(elem);
+//     } else {
+//       str += elem;
+//     }
+//   }
+//   return str;
+// }
+// console.log(mergeLetters(array));
+
+// 120.5 Дан многомерный массив произвольного уровня вложенности, например, такой: [1, [2, 7, 8], [3, 4], [5, [6, 7]]]
+// Возведите все элементы-числа этого массива в квадрат.
+
+// let array = [1, [2, 7, 8], [3, 4], [5, [6, 7]]];
+
+// function sumSquareElem(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (typeof arr[i] === "object") {
+//       sum += sumSquareElem(arr[i]);
+//     } else {
+//       sum += arr[i] ** 2;
+//     }
+//   }
+//   return sum;
+// }
+
+// console.log(sumSquareElem(array));

@@ -11,20 +11,6 @@
 //   }
 // }
 // func(1, 1, 10);
-
-// let arr = [1, 2, [3, 4, 5, [6, 7], 8], 9, 10, 11];
-// function fillArr(arr) {
-//   let newArr = [];
-//   for (let i = 0; i < arr.length; i += 1) {
-//     // console.log(arr[i]);
-//     if (arr[i].isNumber) {
-//       newArr.push(arr[i]);
-//     }
-//   }
-//   return newArr;
-// }
-// fillArr([1, 2, [3, 4, 5, [6, 7], 8], 9, 10, 11]);
-
 // function func(prevPrevNum, prevNum) {
 //   let current = prevPrevNum + prevNum;
 //   console.log(current);
@@ -33,12 +19,30 @@
 //   }
 // }
 
-function func(prevPrevNum, prevNum) {
+// function func(prevPrevNum, prevNum) {
+//   let result = [];
+//   function func1(prevPrevNum, prevNum) {
+//     let current = prevPrevNum + prevNum;
+//     result.push(current);
+//   }
+//   console.log(func1(prevPrevNum, prevNum));
+// }
+// func(1, 2);
+
+// 2 Дан многомерный массив произвольного уровня вложенности, например, такой: [1, [2, 7, 8], [3, 4], [5, [6, 7]]]
+// Выведите на экран все элементы-массивы, содержащие внутри себя только примитивы.
+let array = [1, [2, 7, 8], [3, 4], [5, [6, 7]], 9, 10];
+function func(arr) {
   let result = [];
-  function func1(prevPrevNum, prevNum) {
-    let current = prevPrevNum + prevNum;
-    result.push(current);
+
+  for (let elem of arr) {
+    if (typeof elem === "object") {
+      result.push(...func(elem));
+    } else {
+      result.push(elem);
+    }
   }
-  console.log(func1(prevPrevNum, prevNum));
+  return result;
 }
-func(1, 2);
+
+console.log(func(array));
